@@ -1,19 +1,46 @@
-# C++ Search Engine (Phase 1)
+# C++ Search Engine
+
+## Overview
+
+High-performance lightweight search engine implemented in C++.
+
+The project focuses on:
+
+- Efficient text indexing
+- Fast ranked retrieval
+- Memory-aware posting list representation
+- Modular architecture
 
 ## Features
-- Tokenization (lowercase + punctuation removal)
-- Inverted Index
-- BM25 Ranking
-- Top-K Retrieval
+
+### Core Retrieval
+- Tokenization (lowercase normalization and punctuation filtering)
+- Inverted Index construction
+- BM25 ranking model
+- Top-K result retrieval
+
+### Performance Enhancements (Phase 2)
+- Posting list compression module
+- Improved storage efficiency for index structures
 
 ## Architecture
-Raw Text → Tokenizer → Inverted Index → BM25 → Ranked Results
 
-## Status
-Phase 1 Complete:
-- Single shard
-- No compression
-- No concurrency
+Raw Text  
+→ Tokenizer  
+→ Inverted Index Construction  
+→ Optional Compression Layer  
+→ BM25 Ranking  
+→ Retrieval Output
 
-Next:
-- Posting list compression
+## System Design Notes
+
+- Single shard architecture
+- No concurrency layer yet
+- Focus on deterministic retrieval correctness and memory efficiency
+
+## Project Status
+
+- Phase 1: Core Search Engine ✔  
+- Phase 2: Compression and index optimization ✔ 
+
+
