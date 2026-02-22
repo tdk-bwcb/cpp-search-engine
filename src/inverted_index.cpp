@@ -26,6 +26,17 @@ const std::vector<Posting>& InvertedIndex::get_postings(const std::string& term)
     return empty;
 }
 
+std::vector<int> InvertedIndex::get_doc_ids(const std::string& term) const {
+    std::vector<int> doc_ids;
+    const auto& postings = get_postings(term);
+
+    for(const auto& posting : postings) {
+        doc_ids.push_back(posting.doc_id);
+    }
+
+    return doc_ids;
+}
+
 int InvertedIndex::get_doc_length(int doc_id) const {
     auto it = doc_lengths.find(doc_id);
     if(it != doc_lengths.end()){

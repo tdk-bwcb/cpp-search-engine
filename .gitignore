@@ -1,4 +1,20 @@
+# Build directories
 build/
+
+# Object files
 *.o
+
+# Executables
 *.out
 *.exe
+search
+demo
+test
+search_engine
+test_compression
+
+# macOS
+.DS_Store
+
+# IDE config
+.vscode/
